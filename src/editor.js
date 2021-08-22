@@ -5,7 +5,6 @@ import { useEffect , useState, useCallback } from 'react';
 
 
 function Editor({data, setData}) {
-    // const [data,setData] = useState('');
     const [isMobile,setIsMobile] = useState();
 
     const getDimensions = () => {
@@ -15,7 +14,7 @@ function Editor({data, setData}) {
     useEffect(() => {
         window.addEventListener('resize', getDimensions);
         return () => window.removeEventListener('resize', getDimensions);
-    },[getDimensions]);
+    },[]);
 
     return (
         <div>
